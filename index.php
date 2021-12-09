@@ -13,12 +13,20 @@
         <img src="./assets/spotify-logo.svg" alt="Logo Spotify" height="45">
     </header>
     <main class="px-3 py-5">
-        <div id="app" class="row gx-5 my-5 justify-content-center">
-            <div class="col-md-2 text-center card_music my-3" v-for="album in albums">
-                <div class="content p-4">
-                    <img :src="album.poster" :alt="album.author" class="img-fluid">
-                    <h2 class="title mt-3">{{ album.title }}</h2>
-                    <p class="text mt-4">{{ album.author }}<br>{{ album.year }}</p>
+        <div id="app">
+            <div class="select text-center d-flex justify-content-center">
+                <select name="filter" id="filter" v-model="selectGenre" @change="changeGenre(selectGenre)">
+                    <option value="">Seleziona Genere</option>
+                    <option v-for="genre in genres" :value="genre">{{ genre }}</option>
+                </select>
+            </div>
+            <div class="row gx-5 my-5 justify-content-center">
+                <div class="col-md-2 text-center card_music my-3" v-for="album in filterMusics">
+                    <div class="content p-4">
+                        <img :src="album.poster" :alt="album.author" class="img-fluid">
+                        <h2 class="title mt-3">{{ album.title }}</h2>
+                        <p class="text mt-4">{{ album.author }}<br>{{ album.year }}</p>
+                    </div>
                 </div>
             </div>
         </div>
