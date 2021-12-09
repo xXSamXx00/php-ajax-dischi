@@ -1,0 +1,38 @@
+header {
+    background-color: #2e3a46;
+}
+
+main {
+    background-color: #1e2d3b;
+}
+
+.row {
+    margin: 0 !important;
+}
+
+.content {
+    background-color: #2e3a46;
+    height: 450px;
+}
+
+.title {
+    color: white;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding: 0 25px;
+}
+
+.text {
+    color: #758080;
+    font-size: 20px;
+}
+
+.loading {
+    color: white;
+}
+
+select {
+    width: 10%;
+    border-radius: 6px;
+    background-color: lightgray;
+}
